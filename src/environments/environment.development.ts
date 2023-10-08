@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiBaseUrl: 'http://dummy.restapiexample.com/',
+    apiBaseUrl: 'http://dummy.restapiexample.com/api/v1',
 };
