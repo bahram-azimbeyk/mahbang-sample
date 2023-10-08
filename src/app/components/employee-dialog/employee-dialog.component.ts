@@ -36,13 +36,13 @@ export class EmployeeDialogComponent implements OnInit {
     }
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.form.valid) {
       this.dialogRef.close(this.form.value);
     }
   }
 
-  closeDialog() {
+  closeDialog(): void {
     this.dialogRef.close();
   }
 }
