@@ -16,7 +16,7 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/employee`);
   }
 
-  getEmployeeById(id: number) {
+  getEmployeeById(id: string) {
     return this.http.get(`${this.baseUrl}/employee/${id}`);
   }
 
@@ -24,11 +24,11 @@ export class ApiService {
     return this.http.post(`${this.baseUrl}/create`, data);
   }
 
-  updateEmployee(id: number, data: Partial<Employee>) {
+  updateEmployee(id: string, data: Partial<Employee>) {
     return this.http.put(`${this.baseUrl}/update/${id}`, data);
   }
 
-  deleteEmployee(id: number) {
+  deleteEmployee(id: string) {
     return this.http.delete(`${this.baseUrl}/delete/${id}`);
   }
 }
