@@ -1,6 +1,10 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Employee } from '../models/employee.model';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class EmployeeState {
 
   private employees$ = new BehaviorSubject<Employee[]>([]);
