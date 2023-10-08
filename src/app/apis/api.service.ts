@@ -14,7 +14,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getEmployees(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/employee`);
+    return this.http.get(`${this.baseUrl}/employees`);
   }
 
   // unused api!
