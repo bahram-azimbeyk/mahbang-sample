@@ -18,29 +18,35 @@ export class EmployeeFacade {
 
   loadAllEmployees(): void {
     this.api.getEmployees().pipe(
-      map(data => {
-        const employees = data['data'] as Employee[];
-        this.state.setEmployeesList(employees);
+      map(res => {
+        return res.data.map((employee: any) => {
+          return {
+            id: employee.id,
+            name: employee.employee_name,
+            salary: employee.employee_salary,
+            age: employee.employee_age
+          }
+        });
       })
-    );
+    ).subscribe(employees => {
+      this.state.setEmployeesList(employees);
+    });
   }
 
   createEmployee(data: Partial<Employee>): void {
     this.api.createEmployee(data).pipe(
-      map(data => {
-        const employee = data['data'] as Employee;
-        this.state.addEmployee(employee);
-      })
-    );
+      map(res => res.data)
+    ).subscribe(employee => {
+      this.state.addEmployee(employee);
+    });
   }
 
   editEmployee(id: string, data: any): void {
     this.api.updateEmployee(id, data).pipe(
-      map(data => {
-        const employee = data['data'] as Employee;
-        this.state.updateEmployee(employee);
-      })
-    );
+      map(res => res.data)
+    ).subscribe(employee => {
+      this.state.updateEmployee(employee);
+    });
   }
 
   deleteEmployee(id: string): void {
