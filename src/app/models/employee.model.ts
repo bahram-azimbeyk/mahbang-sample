@@ -3,5 +3,4 @@ export interface Employee {
     name: string;
     salary: string;
     age: string;
-    profile_image: string;
 }
