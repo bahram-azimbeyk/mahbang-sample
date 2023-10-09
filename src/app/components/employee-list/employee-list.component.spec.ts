@@ -17,8 +17,8 @@ describe('EmployeeListComponent', () => {
     mockEmployeeFacade = {
       loadAllEmployees: jasmine.createSpy('loadAllEmployees'),
       getEmployeesList$: jasmine.createSpy('getEmployeesList$').and.returnValue(of([
-        { id: '1', employee_name: 'John', employee_salary: '50000', employee_age: '30', profile_image: '' },
-        { id: '2', employee_name: 'Jane', employee_salary: '60000', employee_age: '25', profile_image: '' }
+        { id: '1', name: 'John', salary: '50000', age: '30' },
+        { id: '2', name: 'Jane', salary: '60000', age: '25' }
       ])),
       createEmployee: jasmine.createSpy('createEmployee'),
       editEmployee: jasmine.createSpy('editEmployee'),
