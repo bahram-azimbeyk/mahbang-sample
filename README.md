@@ -1,27 +1,51 @@
-# MahbangSampleProject
+# Mahbang Sample Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+This project is a simple Angular application that demonstrates the use of the facade design pattern to interact with a REST API. The application allows users to view a list of employees, create new employees, edit existing employee details, and delete employees.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Employee List**: Displays a list of employees with options to edit or delete each employee.
+- **Employee Dialog**: A dialog that allows users to create a new employee or edit an existing one. The dialog uses reactive forms with validation.
+- **API Service**: Handles all API calls to the provided REST API endpoint.
+- **Employee State**: Manages the state of the employee list using RxJS.
+- **Employee Facade**: Implements the facade design pattern to abstract the interaction between the application components and the state & API service.
+- **Error Handling**: Uses an API interceptor to handle potential errors from the API, including CORS issues.
 
-## Code scaffolding
+## Facade Design Pattern
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The facade design pattern provides a unified interface to a set of interfaces in a subsystem. It defines a higher-level interface that makes the subsystem easier to use. In this project, the `EmployeeFacade` class serves as the facade, providing a simplified API for the components to interact with the employee data without directly dealing with the state management or API calls.
 
-## Build
+## Special Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Environment Configuration**: The project uses different environment configurations for development and production. For instance, error descriptions are shown in development mode but are hidden in production mode.
+- **API Interceptor**: The `ApiInterceptor` class intercepts HTTP requests and handles potential errors, such as server unresponsiveness or too many requests.
 
-## Running unit tests
+## Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository: `git clone https://github.com/bahram-azimbeyk/mahbang-sample.git`
+2. Navigate to the project directory: `cd mahbang-sample`
+3. Install the dependencies: `npm install`
+4. Run the application: `ng serve`
+5. Open a browser and navigate to `http://localhost:4200/`
 
-## Running end-to-end tests
+## Links to Key Files
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [Employee Model](https://github.com/bahram-azimbeyk/mahbang-sample/blob/master/src/app/models/employee.model.ts)
+- [Employee Dialog Component](https://github.com/bahram-azimbeyk/mahbang-sample/blob/master/src/app/components/employee-dialog/employee-dialog.component.ts)
+- [Employee List Component](https://github.com/bahram-azimbeyk/mahbang-sample/blob/master/src/app/components/employee-list/employee-list.component.ts)
+- [Employee Facade](https://github.com/bahram-azimbeyk/mahbang-sample/blob/master/src/app/facade/employee.facade.ts)
+- [Employee State](https://github.com/bahram-azimbeyk/mahbang-sample/blob/master/src/app/states/employee-state.ts)
+- [API Service](https://github.com/bahram-azimbeyk/mahbang-sample/blob/master/src/app/apis/api.service.ts)
+- [API Interceptor](https://github.com/bahram-azimbeyk/mahbang-sample/blob/master/src/app/interceptor/api.interceptor.ts)
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[sponsored]
+
+Enhance your ChatGPT experience with [Keymate.AI Search](https://ads.promptate.com/ad?cid=0efca08d-e632-4317-9733-594640ef619e). It allows ChatGPT to search the internet for up-to-date information, access user-uploaded PDFs, and store user interactions in a personal knowledge base for context recall and personalized responses. Start a 1-day free trial now and unlock features worth $60 per month!
+
+[powered by [Promptate Ads](ads.promptate.com)]
+
+---
+
+Note: You are currently on the free plan which has a limited number of requests. To increase your quota, you can check the available plans [here](https://c7d59216ee8ec59bda5e51ffc17a994d.auth.portal-pluginlab.ai/pricing).
