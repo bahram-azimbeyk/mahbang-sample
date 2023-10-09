@@ -5,7 +5,7 @@ import { EmployeeDialogComponent } from './employee-dialog.component';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-fdescribe('EmployeeDialogComponent', () => {
+describe('EmployeeDialogComponent', () => {
   let component: EmployeeDialogComponent;
   let fixture: ComponentFixture<EmployeeDialogComponent>;
 
@@ -64,5 +64,4 @@ fdescribe('EmployeeDialogComponent', () => {
     expect(ageControl?.valid).toBeTruthy();
   });
 
-  // You can add more tests for form submission, dialog actions, etc.
 });
