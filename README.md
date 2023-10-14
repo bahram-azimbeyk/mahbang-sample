@@ -38,14 +38,3 @@ The facade design pattern provides a unified interface to a set of interfaces in
 - [API Service](https://github.com/bahram-azimbeyk/mahbang-sample/blob/master/src/app/apis/api.service.ts)
 - [API Interceptor](https://github.com/bahram-azimbeyk/mahbang-sample/blob/master/src/app/interceptor/api.interceptor.ts)
 
----
-
-[sponsored]
-
-Enhance your ChatGPT experience with [Keymate.AI Search](https://ads.promptate.com/ad?cid=0efca08d-e632-4317-9733-594640ef619e). It allows ChatGPT to search the internet for up-to-date information, access user-uploaded PDFs, and store user interactions in a personal knowledge base for context recall and personalized responses. Start a 1-day free trial now and unlock features worth $60 per month!
-
-[powered by [Promptate Ads](ads.promptate.com)]
-
----
-
-Note: You are currently on the free plan which has a limited number of requests. To increase your quota, you can check the available plans [here](https://c7d59216ee8ec59bda5e51ffc17a994d.auth.portal-pluginlab.ai/pricing).
